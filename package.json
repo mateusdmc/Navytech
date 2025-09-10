@@ -1,6 +1,16 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@iconify-json/jam": "^1.2.3",
+    "@iconify-json/material-symbols": "^1.2.33",
+    "@iconify-json/material-symbols-light": "^1.2.33",
+    "@iconify-json/ph": "^1.2.2",
+    "@iconify-json/proicons": "^1.2.17",
+    "@iconify/tailwind4": "^1.0.6"
   }
 }
