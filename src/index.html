@@ -1,12 +1,579 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS</title>
+    <title>Navytech</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <meta name="theme-color" content="#000816">
     <link rel="stylesheet" href="./output.css">
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <link rel="stylesheet" href="../assets/css/slider.css">
 </head>
 <body>
-    <p class="text-4xl text-amber-700 font-bold">teste</p>
+
+    <!-- Navbar -->
+    <section class="flex justify-center bg-[#000816]">
+        <div class="container pt-[24px] lg:pt-[40px] lg:pb-[30px] 2xl:pt-[50px] 2xl:pb-[50px] px-[10px] lg:px-[60px]">
+            <div>
+                <div class="flex justify-between items-center">
+                    <a href="#">
+                        <img src="../assets/img/Logo.png" alt="logomarca" class="w-[66px] 2xl:w-[80px]">
+                    </a>
+                    <div class="hidden md:block">
+                        <div class="flex items-center font-[Outfit] text-white font-light gap-[28px] text-[14px] 2xl:gap-[38px]">
+                            <a href="#section-services" class="hover:opacity-75 2xl:text-[18px]">Services</a>
+                            <a href="#section-portfolio" class="hover:opacity-75 2xl:text-[18px]">Porftfolio</a>
+                            <a href="#section-about" class="hover:opacity-75 2xl:text-[18px]">About us</a>
+                            <a href="#section-depoimento" class="hover:opacity-75 2xl:text-[18px]">Testimonial</a>
+                            <button id="openModal" class="flex items-center cursor-pointer ">
+                            <span class="icon-[material-symbols-light--search] w-[22px] h-[22px] 2xl:w-[34px] 2xl:h-[34px] hover:opacity-70"></span>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <button class="text-white group-hover:text-[#000816] font-[Outfit] font-light border-[1px] border-[#fff] group-hover:bg-[#fff] py-[4px] px-[14px] rounded-[8px] md:px-[20px] 2xl:py-[6px] 2xl:px-[30px] cursor-pointer">
+                            <div class="flex justify-center items-center gap-[10px] 2xl:gap-[14px]">
+                                <span class="icon-[material-symbols-light--call] w-[22px] h-[22px] 2xl:w-[32px] 2xl:h-[32px] bg-[#fff] group-hover:bg-[#000816]"></span>
+                                <p class="text-[14px] 2xl:text-[18px]">Talk to us</p>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero -->
+    <section class="flex justify-center bg-[#000816]">
+        <div class="container py-[50px] lg:py-[80px] px-[10px] lg:px-[60px]">
+            <div class="md:flex md:gap-[40px] md:justify-between md:items-center">
+                <div class="pb-[40px] md:w-[380px] md:pb-[0px] lg:w-[490px] xl:w-[600px] 2xl:w-[660px]">
+                    <div class="text-white flex flex-col gap-[16px]">
+                        <h1 class="font-[Outfit] text-[34px] leading-none text-center md:text-left lg:text-[46px] xl:text-[56px] 2xl:text-[64px]">#1 Worldwide Digital Solution Agency</h1>
+                        <p class="font-[Inter] text-[14px] text-center md:text-left lg:text-[16px] xl:text-[18px] 2xl:text-[20px]">Revolutionize your global digital strategy with the #1 Worldwide Digital Solution Agency, pioneering innovative solutions for unparalleled success.</p>
+                    </div>
+                    <div class="flex justify-center py-[40px] md:justify-start md:py-[20px] lg:py-[40px]">
+                        <button class="cursor-pointer bg-[#003BA4] hover:bg-[#00286d] hover:shadow-lg text-white font-[Inter] font-light text-[18px] rounded-[12px] w-[220px] h-[60px] 2xl:text-[24px] 2xl:rounded-[16px] 2xl:w-[324px] 2xl:h-[82px]">
+                            <div class="flex justify-center items-center gap-[14px] 2xl:gap-[24px]">
+                               <span class="icon-[material-symbols--call] w-[28px] h-[28px] 2xl:w-[44px] 2xl:h-[44px]" style="color: #fff;"></span>
+                            <p>Book a call</p>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center gap-[10px] md:justify-start 2xl:gap-[24px]">
+                        <div class="relative rounded-[12px] p-[1px] bg-gradient-to-r from-[#2D333E] via-[#ffffff] to-[#2D333E] sm:w-[160px] xl:w-[190px] hover:scale-106 transition-transform">
+                            <div class="text-white bg-[#1A212D] py-[12px] px-[20px] rounded-[12px] xl:py-[16px] xl:px-[26px]">
+                                <div class="font-[Inter] flex flex-col text-center gap-[4px]">
+                                    <p class="text-[24px] font-semibold leading-none xl:text-[34px]">75k+</p>
+                                    <p class="opacity-70 text-[12px] xl:text-[14px]">Project Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative rounded-[12px] p-[1px] bg-gradient-to-r from-[#2D333E] via-[#ffffff] to-[#2D333E] sm:w-[160px] xl:w-[190px] hover:scale-106 transition-transform">
+                            <div class="text-white bg-[#1A212D] py-[12px] px-[20px] rounded-[12px] xl:py-[16px] xl:px-[26px]">
+                                <div class="font-[Inter] flex flex-col text-center gap-[4px]">
+                                    <p class="text-[24px] font-semibold leading-none xl:text-[34px]">20+</p>
+                                    <p class="opacity-70 text-[12px] xl:text-[14px]">Years of Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative rounded-[12px] p-[1px] bg-gradient-to-r from-[#2D333E] via-[#ffffff] to-[#2D333E] sm:w-[160px] xl:w-[190px] hover:scale-106 transition-transform">
+                            <div class="text-white bg-[#1A212D] py-[12px] px-[20px] rounded-[12px] xl:py-[16px] xl:px-[26px]">
+                                <div class="font-[Inter] flex flex-col text-center gap-[4px]">
+                                    <p class="text-[24px] font-semibold leading-none xl:text-[34px]">400+</p>
+                                    <p class="opacity-70 text-[12px] xl:text-[14px]">Clients Worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="../assets/img/hero.png" alt="imagem inicial" class="w-[320px] lg:w-[370px] xl:w-[410px] 2xl:xl:w-[510px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas -->
+    <section class="flex justify-center bg-[#003BA4]">
+        <div class="container py-[50px] lg:py-[40px] px-[10px] lg:px-[60px]">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-[20px] lg:justify-between">
+                <div class="font-[Inter] text-white text-center lg:text-left lg:w-[300px]">
+                    <p class="opacity-70 font-light text-[14px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px]">Trusted by</p>
+                    <p class="font-semibold text-[20px] lg:text-[28px] xl:text-[30px] 2l:text-[32px]">Top Companies</p>
+                </div>
+                <div class="flex justify-between pt-[20px] lg:pt-[0px]">
+                    <div><img src="../assets/img/Google-Logotype.png" alt="Google-Logotype" class="hover:scale-110 transition-transform"></div>
+                    <div><img src="../assets/img/Canva-Logotype.png" alt="Canva-Logotype" class="hover:scale-110 transition-transform"></div>
+                    <div><img src="../assets/img/Amazon-Logotype.png" alt="Amazon-Logotype" class="hover:scale-110 transition-transform"></div>
+                    <div><img src="../assets/img/Sketch-Logotype.png" alt="Sketch-Logotype" class="hover:scale-110 transition-transform"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicos -->
+    <section class="flex justify-center" id="section-services">
+        <div class="container py-[50px] lg:py-[80px] px-[10px] lg:px-[60px]">
+            <div class="flex flex-col items-center font-[Inter] text-[#000816] 2xl:gap-[8px]">
+                <p class="font-light text-[16px] lg:text-[20px] 2xl:text-[24px] opacity-[70%]">Our services</p>
+                <h2 class="font-semibold text-[24px] lg:text-[28px] 2xl:text-[36px] leading-none">Growth based services</h2>
+            </div>
+
+            <div class="flex flex-col items-center justify-between gap-[28px] pt-[40px] lg:gap-[10px] lg:flex-row xl:gap-[28px] 2xl:pt-[80px]">
+
+                <div class="flex flex-col gap-[28px] md:flex-row lg:gap-[10px] xl:gap-[28px]">
+                    <div class="flex flex-col border-1 border-[#f3f3f3] gap-[20px] w-[280px] py-[30px] px-[18px] lg:w-[100%] lg:px-[12px] 2xl:py-[40px] 2xl:gap-[24px] 2xl:px-[24px] hover:bg-[#F0F5FF]">
+                        <div class="flex justify-center">
+                            <img src="../assets/img/PaintBrush.png" alt="iocn-brush" class="w-[70px] 2xl:w-[100px]">
+                        </div>
+                        <div class="text-center flex flex-col gap-[16px] 2xl:gap-[16px]">
+                            <h3 class="font-semibold text-[#000816] text-[18px] lg:text-[20px] 2xl:text-[24px] leading-none">Branding and UI/UX</h3>
+                            <p class="font-normal text-[#000816] leading-[18px] text-[15px] lg:text-[16px] lg:leading-[20px] 2xl:text-[18px] 2xl:leading-[24px]">Lorem ipsum dolor sit amet consectetur. Quam diam augue lectus vivamus metus</p>
+                            <div class="font-[Inter] text-[#003BA4] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                                <a href="#">
+                                    <div class="flex items-center justify-center gap-[6px]">
+                                        <p>View details</p> 
+                                        <span class="icon-[material-symbols-light--arrow-forward-ios-rounded]" style=" color: #003BA4;"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border-1 border-[#f3f3f3] gap-[20px] w-[280px] py-[30px] px-[18px] lg:w-[100%] lg:px-[12px] 2xl:py-[40px] 2xl:gap-[24px] 2xl:px-[24px] hover:bg-[#F0F5FF]">
+                        <div class="flex justify-center">
+                            <img src="../assets/img/GlobeHemisphereWest.png" alt="iocn-brush" class="w-[70px] 2xl:w-[100px]">
+                        </div>
+                        <div class="text-center flex flex-col gap-[16px]">
+                            <h3 class="font-semibold text-[#000816] text-[18px] lg:text-[20px] 2xl:text-[24px] leading-none">Web Development</h3>
+                            <p class="font-normal text-[#000816] leading-[18px] text-[15px] lg:text-[16px] lg:leading-[20px] 2xl:text-[18px] 2xl:leading-[24px]">Lorem ipsum dolor sit amet consectetur. Quam diam augue lectus vivamus metus</p>
+                            <div class="font-[Inter] text-[#003BA4] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                                <a href="#">
+                                    <div class="flex items-center justify-center gap-[6px]">
+                                        <p></p>View details 
+                                        <span class="icon-[material-symbols-light--arrow-forward-ios-rounded]" style=" color: #003BA4;"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-[28px] md:flex-row lg:gap-[10px] xl:gap-[28px]">
+                    <div class="flex flex-col border-1 border-[#f3f3f3] gap-[20px] w-[280px] py-[30px] px-[18px] lg:w-[100%] lg:px-[12px] 2xl:py-[40px] 2xl:gap-[24px] 2xl:px-[24px] hover:bg-[#F0F5FF]">
+                        <div class="flex justify-center">
+                            <img src="../assets/img/DeviceMobile.png" alt="iocn-brush" class="w-[70px] 2xl:w-[100px]">
+                        </div>
+                        <div class="text-center flex flex-col gap-[16px]">
+                            <h3 class="font-semibold text-[#000816] text-[18px] lg:text-[20px] 2xl:text-[24px] leading-none">Mobile Development</h3>
+                           <p class="font-normal text-[#000816] leading-[18px] text-[15px] lg:text-[16px] lg:leading-[20px] 2xl:text-[18px] 2xl:leading-[24px]">Lorem ipsum dolor sit amet consectetur. Quam diam augue lectus vivamus metus</p>
+                            <div class="font-[Inter] text-[#003BA4] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                                <a href="#">
+                                    <div class="flex items-center justify-center gap-[6px]">
+                                        <p></p>View details 
+                                        <span class="icon-[material-symbols-light--arrow-forward-ios-rounded]" style=" color: #003BA4;"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col border-1 border-[#f3f3f3] gap-[20px] w-[280px] py-[30px] px-[18px] lg:w-[100%] lg:px-[12px] 2xl:py-[40px] 2xl:gap-[24px] 2xl:px-[24px] hover:bg-[#F0F5FF]">
+                        <div class="flex justify-center">
+                            <img src="../assets/img/CreditCard.png" alt="iocn-brush" class="w-[70px] 2xl:w-[100px]">
+                        </div>
+                        <div class="text-center flex flex-col gap-[16px]">
+                            <h3 class="font-semibold text-[#000816] text-[18px] lg:text-[20px] 2xl:text-[24px] leading-none">Digital Marketing</h3>
+                           <p class="font-normal text-[#000816] leading-[18px] text-[15px] lg:text-[16px] lg:leading-[20px] 2xl:text-[18px] 2xl:leading-[24px]">Lorem ipsum dolor sit amet consectetur. Quam diam augue lectus vivamus metus</p>
+                            <div class="font-[Inter] text-[#003BA4] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                                <a href="#">
+                                    <div class="flex items-center justify-center gap-[6px]">
+                                        <p></p>View details 
+                                        <span class="icon-[material-symbols-light--arrow-forward-ios-rounded]" style=" color: #003BA4;"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="flex justify-center bg-[#000816]" id="section-portfolio">
+        <div class="container py-[50px] lg:py-[80px] px-[10px] lg:px-[60px]">
+            <div class="flex flex-col items-center font-[Inter] 2xl:gap-[8px]">
+                <p class="font-light text-[16px] lg:text-[20px] 2xl:text-[24px] text-white opacity-[70%]">Portfolio</p>
+                <h2 class="font-semibold text-[24px] lg:text-[28px] 2xl:text-[36px] text-white leading-none">Our previous works</h2>
+            </div>
+            <div class="py-[40px] flex justify-center 2xl:py-[80px]">
+                <div class="grid grid-cols-2 gap-[12px] lg:grid-cols-3 lg:gap-[20px] 2xl:gap-[32px]">
+                    <img src="../assets/img/Frame-1.png" alt="Frame-1" class="hover:scale-102 transition-transform">
+                    <img src="../assets/img/Frame-2.png" alt="Frame-2" class="hover:scale-102 transition-transform">
+                    <img src="../assets/img/Frame-3.png" alt="Frame-3" class="hover:scale-102 transition-transform">
+                    <img src="../assets/img/Frame-4.png" alt="Frame-4" class="hover:scale-102 transition-transform">
+                    <img src="../assets/img/Frame-5.png" alt="Frame-5" class="hover:scale-102 transition-transform">
+                    <img src="../assets/img/Frame-6.png" alt="Frame-6" class="hover:scale-102 transition-transform">
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <button class="cursor-pointer bg-[#003BA4] hover:bg-[#00286d] hover:shadow-lg text-white font-[Inter] font-light text-[18px] rounded-[12px] w-[220px] h-[60px] 2xl:text-[24px] 2xl:rounded-[16px] 2xl:w-[324px] 2xl:h-[82px]">
+                    <div class="flex justify-center items-center gap-[14px] 2xl:gap-[24px]">
+                    <p>View more</p>
+                    <span class="icon-[material-symbols-light--arrow-right-alt-rounded] w-[34px] h-[34px] 2xl:w-[44px] 2xl:h-[44px]" style="color: #ffffff"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="flex justify-center" id="section-about">
+        <div class="container py-[50px] lg:py-[80px] px-[10px] lg:px-[60px]">
+            <div class="flex flex-col items-center font-[Inter] text-[#000816] 2xl:gap-[8px]">
+                <p class="font-light text-[16px] lg:text-[20px] 2xl:text-[24px] opacity-[70%]">About us</p>
+                <h2 class="font-semibold text-[24px] lg:text-[28px] 2xl:text-[36px] leading-none">Why we are best</h2>
+            </div>
+
+            <div class="md:pt-[40px] 2xl:pt-[80px] md:flex md:gap-[26px] md:items-center xl:gap-[40px]">
+                <div class="py-[40px] md:py-[0px]">
+                    <img src="../assets/img/Why-we-are-best.png" alt="Imagem de pessoas">
+                </div>
+
+                <div class="flex flex-col text-[#000816] font-[Inter] gap-[32px] md:w-[500px] lg:w-[640px] md:gap-[20px] xl:gap-[30px] 2xl:gap-[40px]">
+                    <p class="text-[#000816] text-[14px] leading-[16px] lg:leading-normal lg:text-[15px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing. Bibendum cras fringilla amet suspendisse. Duis mattis hac urna fames in ante.</p>
+                    <div class="flex items-center gap-[16px]">
+                        <img src="../assets/img/Eye.png" alt="Icone olho" class="w-[50px] h-[50px] xl:size-[80px]">
+                        <div class="flex flex-col gap-[4px]">
+                            <h3 class="leading-none font-semibold text-[18px] lg:text-[22px] xl:text-[28px] 2xl:text-[32px]">Our Vision</h3>
+                            <p class="text-[12px] leading-[14px] lg:leading-normal lg:text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Ut elementum ac eget at. Id et at dui arcu risus.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[16px]">
+                        <img src="../assets/img/Target.png" alt="Icone target" class="w-[50px] h-[50px] xl:size-[80px]">
+                        <div class="flex flex-col gap-[4px]">
+                            <h3 class="leading-none font-semibold text-[18px] lg:text-[22px] xl:text-[28px] 2xl:text-[32px]">Our Mission</h3>
+                            <p class="text-[12px] leading-[14px] lg:leading-normal lg:text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Quam arcu habitasse fusce pharetra.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center md:justify-start">
+                        <button class="cursor-pointer bg-[#003BA4] hover:bg-[#00286d] hover:shadow-lg text-white font-[Inter] font-light text-[18px] rounded-[12px] w-[220px] h-[60px] 2xl:text-[24px] 2xl:rounded-[16px] 2xl:w-[324px] 2xl:h-[82px]">
+                            <div class="flex justify-center items-center gap-[14px] 2xl:gap-[24px]">
+                            <p>Read more</p>
+                            <span class="icon-[material-symbols-light--arrow-right-alt-rounded] w-[34px] h-[34px] 2xl:w-[44px] 2xl:h-[44px]" style="color: #ffffff"></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="flex justify-center bg-[#F0F5FF]" id="section-depoimento">
+        <div class="container py-[50px] lg:py-[80px] px-[10px] lg:px-[60px]">
+            <div class="flex flex-col items-center font-[Inter] text-[#000816] 2xl:gap-[8px]">
+                <p class="font-light text-[16px] lg:text-[20px] 2xl:text-[24px] opacity-[70%]">Testimonial</p>
+                <h2 class="font-semibold text-[24px] lg:text-[28px] 2xl:text-[36px] leading-none">What our clients say</h2>
+            </div>
+
+
+
+            <div class="pt-[50px] 2xl:pt-[80px]">
+
+                <div class="embla">
+                    <div class="embla__container flex gap-[0px]">
+
+                        <div class="embla__slide flex justify-center px-[14px]">
+                            <div class="flex flex-col justify-center bg-[#fff] gap-[14px] p-[20px] rounded-[12px] md:w-[100%] 2xl:py-[24px] 2xl:px-[40px]">
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/Quotes.png" alt="icone aspas" class="w-[45px] 2xl:w-[64px]">
+                                </div>
+                                <div>
+                                    <p class="font-[Inter] text-[#000816] text-[12px] 2xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
+                                </div>
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/dep-michael.png" alt="img depoimento" class="w-[150px] 2xl:mt-[20px] 2xl:w-[250px]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="embla__slide flex justify-center px-[14px]">
+                            <div class="flex flex-col justify-center bg-[#fff] gap-[14px] p-[20px] rounded-[12px] md:w-[100%] 2xl:py-[24px] 2xl:px-[40px]">
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/Quotes.png" alt="icone aspas" class="w-[45px] 2xl:w-[64px]">
+                                </div>
+                                <div>
+                                    <p class="font-[Inter] text-[#000816] text-[12px] 2xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
+                                </div>
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/dep-avril.png" alt="img depoimento" class="w-[150px] 2xl:mt-[20px] 2xl:w-[250px]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="embla__slide flex justify-center px-[14px]">
+                            <div class="flex flex-col justify-center bg-[#fff] gap-[14px] p-[20px] rounded-[12px] md:w-[100%] 2xl:py-[24px] 2xl:px-[40px]">
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/Quotes.png" alt="icone aspas" class="w-[45px] 2xl:w-[64px]">
+                                </div>
+                                <div>
+                                    <p class="font-[Inter] text-[#000816] text-[12px] 2xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
+                                </div>
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/dep-michael.png" alt="img depoimento" class="w-[150px] 2xl:mt-[20px] 2xl:w-[250px]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="embla__slide flex justify-center px-[14px]">
+                            <div class="flex flex-col justify-center bg-[#fff] gap-[14px] p-[20px] rounded-[12px] md:w-[100%] 2xl:py-[24px] 2xl:px-[40px]">
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/Quotes.png" alt="icone aspas" class="w-[45px] 2xl:w-[64px]">
+                                </div>
+                                <div>
+                                    <p class="font-[Inter] text-[#000816] text-[12px] 2xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
+                                </div>
+                                <div class="flex justify-center">
+                                    <img src="../assets/img/dep-avril.png" alt="img depoimento" class="w-[150px] 2xl:mt-[20px] 2xl:w-[250px]">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="embla__controls">
+                    <div class="embla__dots"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="flex justify-center">
+        <div class="container py-[50px] lg:py-[80px] px-[10px] lg:px-[60px]">
+            <div class="flex flex-col items-center font-[Inter] text-[#000816] 2xl:gap-[8px]">
+                <p class="font-light text-[16px] lg:text-[20px] 2xl:text-[24px] opacity-[70%]">Blog</p>
+                <h2 class="font-semibold text-[24px] lg:text-[28px] 2xl:text-[36px] leading-none">Browse articles</h2>
+            </div>
+            <div class="flex flex-col items-center justify-between gap-[28px] py-[40px] md:flex-row md:gap-[18px] 2xl:py-[80px]">
+
+                <div class="w-[280px] p-[10px] border-1 border-[#f3f3f3] rounded-[8px] xl:w-[320px] 2xl:w-[380px] hover:scale-102 hover:shadow-md transition-transform">
+                    <img src="../assets/img/post-1.png" alt="post-1">
+                    <div class="flex justify-between font-[Inter] text-[#000816] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                        <div class="flex items-center gap-[6px]">
+                            <span class="icon-[material-symbols-light--person-outline]" style="width: 1.3em; height: 1.3em; color: #003BA4;"></span>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="flex items-center gap-[6px]">
+                            <span class="icon-[material-symbols-light--calendar-today-outline]" style="width: 1.3em; height: 1.3em; color: #003BA4;"></span>
+                            <p>Feb 23, 2024</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[#000816] text-[18px] font-semibold py-[10px] 2xl:text-[24px] 2xl:py-[4px]">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="font-[Inter] text-[#003BA4] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                        <a href="#">
+                            <div class="flex items-center justify-center gap-[6px]">
+                                <p></p>View details 
+                                <span class="icon-[material-symbols-light--arrow-forward-ios-rounded]" style=" color: #003BA4;"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="w-[280px] p-[10px] border-1 border-[#f3f3f3] rounded-[8px] xl:w-[320px] 2xl:w-[380px] hover:scale-102 hover:shadow-md transition-transform">
+                    <img src="../assets/img/post-2.png" alt="post-1">
+                    <div class="flex justify-between font-[Inter] text-[#000816] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                        <div class="flex items-center gap-[6px]">
+                            <span class="icon-[material-symbols-light--person-outline]" style="width: 1.3em; height: 1.3em; color: #003BA4;"></span>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="flex items-center gap-[6px]">
+                            <span class="icon-[material-symbols-light--calendar-today-outline]" style="width: 1.3em; height: 1.3em; color: #003BA4;"></span>
+                            <p>Feb 23, 2024</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[#000816] text-[18px] font-semibold py-[10px] 2xl:text-[24px] 2xl:py-[4px]">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="font-[Inter] text-[#003BA4] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                        <a href="#">
+                            <div class="flex items-center justify-center gap-[6px]">
+                                <p></p>View details 
+                                <span class="icon-[material-symbols-light--arrow-forward-ios-rounded]" style=" color: #003BA4;"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-[280px] p-[10px] border-1 border-[#f3f3f3] rounded-[8px] xl:w-[320px] 2xl:w-[380px] hover:scale-102 hover:shadow-md transition-transform">
+                    <img src="../assets/img/post-3.png" alt="post-1">
+                    <div class="flex justify-between font-[Inter] text-[#000816] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                        <div class="flex items-center gap-[6px]">
+                            <span class="icon-[material-symbols-light--person-outline]" style="width: 1.3em; height: 1.3em; color: #003BA4;"></span>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="flex items-center gap-[6px]">
+                            <span class="icon-[material-symbols-light--calendar-today-outline]" style="width: 1.3em; height: 1.3em; color: #003BA4;"></span>
+                            <p>Feb 23, 2024</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-[#000816] text-[18px] font-semibold py-[10px] 2xl:text-[24px] 2xl:py-[4px]">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="font-[Inter] text-[#003BA4] py-[8px] text-[12px] 2xl:text-[14px] 2xl:py-[12px]">
+                        <a href="#">
+                            <div class="flex items-center justify-center gap-[6px]">
+                                <p></p>View details 
+                                <span class="icon-[material-symbols-light--arrow-forward-ios-rounded]" style=" color: #003BA4;"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center">
+                <button class="cursor-pointer bg-[#003BA4] hover:bg-[#00286d] hover:shadow-lg text-white font-[Inter] font-light text-[18px] rounded-[12px] w-[220px] h-[60px] 2xl:text-[24px] 2xl:rounded-[16px] 2xl:w-[324px] 2xl:h-[82px]">
+                    <div class="flex justify-center items-center gap-[14px] 2xl:gap-[24px]">
+                    <p>Read more</p>
+                    <span class="icon-[material-symbols-light--arrow-right-alt-rounded] w-[34px] h-[34px] 2xl:w-[44px] 2xl:h-[44px]" style="color: #ffffff"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="flex justify-center bg-[#000816]">
+        <div class="container py-[50px] lg:py-[80px] px-[10px] lg:px-[60px]">
+            <div class="flex flex-col flex-wrap md:flex-row md:gap-[20px] md:justify-between">
+                <div class="text-white font-[Inter]">
+                    <div>
+                        <img src="../assets/img/Logo.png" alt="logomarca" class="w-[66px] 2xl:w-[80px]">
+                        <h2 class="font-semibold text-[22px] pt-[10px] lg:text-[28px] xl:text-[30px] 2xl:text-[36px] leading-none">Navytech</h2>
+                    </div>
+                    <div class="py-[26px] font-light text-[14px] 2xl:text-[18px]">
+                       <p>hello@navytech.com</p>
+                       <p>Phone: +01 23456789</p>
+                    </div>
+                    <div class="flex flex-row gap-[14px] items-center">
+                        <a href="#" class="text-[0px]">
+                            <span class="icon-[jam--facebook] bg-[#B2B5B9] hover:bg-[#003BA4] w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"></span>
+                        </a>
+                        <a href="#" class="text-[0px]">
+                            <span class="icon-[jam--twitter] bg-[#B2B5B9] hover:bg-[#003BA4] w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"></span>
+                        </a>
+                        <a href="#" class="text-[0px]">
+                            <span class="icon-[jam--instagram] bg-[#B2B5B9] hover:bg-[#003BA4] w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"></span>
+                        </a>
+                        <a href="#" class="text-[0px]">
+                            <span class="icon-[jam--linkedin] bg-[#B2B5B9] hover:bg-[#003BA4] w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"></span>
+                        </a>
+                        <a href="#" class="text-[0px]">
+                            <span class="icon-[jam--youtube] bg-[#B2B5B9] hover:bg-[#003BA4] w-[24px] h-[24px] xl:w-[32px] xl:h-[32px]"></span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="text-white font-[Inter] pt-[46px]">
+                    <h3 class="leading-none text-[18px] font-semibold 2xl:text-[20px]">Quick Links</h3>
+                    <div class="flex flex-col gap-[8px] pt-[14px] 2xl:pt-[24px]">
+                        <a href="#section-services" class="font-light text-[14px] hover:opacity-75 hover:underline 2xl:text-[16px]">Services</a>
+                        <a href="#section-portfolio" class="font-light text-[14px] hover:opacity-75 hover:underline 2xl:text-[16px]">Portfolio</a>
+                        <a href="#section-about" class="font-light text-[14px] hover:opacity-75 hover:underline 2xl:text-[16px]">About us</a>
+                        <a href="#section-depoimento" class="font-light text-[14px] hover:opacity-75 hover:underline 2xl:text-[16px]">Testimonial</a>
+                    </div>
+                </div>
+                <div class="text-white font-[Inter] pt-[46px]">
+                    <h3 class="leading-none text-[18px] font-semibold 2xl:text-[20px]">Resources</h3>
+                    <div class="flex flex-col gap-[8px] pt-[14px] 2xl:pt-[24px]">
+                        <a href="#" class="font-light text-[14px] hover:opacity-75 hover:underline 2xl:text-[16px]">Support</a>
+                        <a href="#" class="font-light text-[14px] hover:opacity-75 hover:underline 2xl:text-[16px]">Privacy Policy</a>
+                        <a href="#" class="font-light text-[14px] hover:opacity-75 hover:underline 2xl:text-[16px]">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="text-white font-[Inter] pt-[46px]">
+                    <h3 class="leading-none text-[18px] font-semibold 2xl:text-[20px] pb-[14px] 2xl:pb-[24px]">Subscribe</h3>
+                    <div class="bg-[#1A212D] p-[8px] rounded-[8px] w-[100%] 2xl:w-[496px]">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-[6px] 2xl:gap-[16px] 2xl:pl-[10px]">
+                                <span class="icon-[material-symbols-light--mail-outline-rounded] w-[20px] h-[20px] 2xl:w-[30px] 2xl:h-[30px]"></span>
+                                <input type="text" placeholder="name@domain.com" class="w-[100%] h-[40px] 2xl:w-[240px]">
+                            </div>
+                            <button class="cursor-pointer bg-[#003BA4] hover:bg-[#00286d] rounded-[6px] px-[24px] py-[10px] 2xl:w-[178px] 2xl:h-[60px] 2xl:text-[20px]">Send</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+     <section>
+        <div id="modal-overlay" class="fixed inset-0 hidden flex items-center justify-center z-50 bg-gray-900/50 backdrop-blur-sm">
+
+            <div class="rounded-lg p-[0px] w-[580px] 2xl:w-[700px] relative p-[40px]">
+
+                <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg> -->
+                </button>
+
+                <div class="bg-[#1A212D] p-[8px] rounded-[8px] w-[100%]">
+                    <div class="flex items-center justify-between text-white font-[Inter]">
+                        <div class="flex items-center gap-[6px] 2xl:gap-[16px] 2xl:pl-[10px]">
+                            <span class="icon-[material-symbols-light--call] w-[42px] h-[42px] 2xl:w-[32px] 2xl:h-[32px] bg-[#fff] group-hover:bg-[#000816] pr-[20px]"></span>
+                            <input type="text" placeholder="search..." class="text-[20px] w-[100%] h-[40px] 2xl:w-[240px] 2xl:text-[22px] focus:outline-none">
+                        </div>
+                        <button class="cursor-pointer bg-[#003BA4] hover:bg-[#00286d] rounded-[6px] px-[24px] py-[10px] 2xl:w-[178px] 2xl:h-[60px] 2xl:text-[20px]">Search</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+     </section>
+
+    <script src="../assets/js/slider.js"></script>
+    <script>
+        const openButton = document.getElementById('openModal');
+        const closeButton = document.getElementById('closeModal');
+        const modal = document.getElementById('modal-overlay');
+
+        openButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        });
+
+        // Opcional: Fechar o modal ao clicar fora do conteúdo
+        modal.addEventListener('click', (event) => {
+            if (event.target.id === 'modal-overlay') {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>

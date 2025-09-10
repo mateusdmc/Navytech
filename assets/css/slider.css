@@ -1,0 +1,44 @@
+.embla {
+    overflow: hidden;
+}
+
+/* .embla__container {
+    display: flex;
+    gap: 1rem;
+} */
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 200px;
+}
+
+.embla__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.embla__dot {
+    background-color: transparent;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    /* border: 1px solid #D9D9D9; */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 0.25rem;
+    background-color: #D9D9D9;
+}
+
+/* Ponto ativo */
+.embla__dot--selected {
+    background-color: #003BA4;
+}
+
+@media (min-width: 768px) { 
+    .embla__slide {
+        flex: 0 0 50%;
+        min-width: 0;
+    }
+
+}
