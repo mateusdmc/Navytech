@@ -14,4 +14,5 @@ O desenvolvimento deste projeto foi realizado com as seguintes ferramentas e tec
 - **CSS**: Estilização e apresentação visual.
 - **JavaScript**: Implementação da lógica interativa e dinâmica do projeto.
 - **Tailwind CSS**: Framework utilitário para um desenvolvimento de design rápido e responsivo.
+- **Embla Carousel**: Biblioteca JavaScript para criação de carrosséis (sliders) fluidos, leves e responsivos.
 - **Node/NPM**: Gerenciamento de dependências e automação de tarefas do projeto.
